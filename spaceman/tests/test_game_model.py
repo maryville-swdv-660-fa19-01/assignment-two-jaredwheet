@@ -51,8 +51,9 @@ class GameModelTests( TestCase ):
             guesses_taken= expectedGuessesTaken
         )
 
+        newGuessesTaken = expectedGuessesTaken + 1
         game.handleGuess('X')
-        self.assertEquals( expectedGuessesTaken, game.guesses_taken )
+        self.assertEquals( newGuessesTaken, game.guesses_taken )
     
 
     ### guessed_word_state field
